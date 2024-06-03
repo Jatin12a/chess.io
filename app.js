@@ -76,7 +76,8 @@ io.on("connection",function(uniquesocket){
             }
 
         } catch(err){
-
+            console.log(err);
+            uniquesocket.emit("jana lavde sab galat hai :" , move)
         }
     })
 
