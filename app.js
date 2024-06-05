@@ -85,5 +85,5 @@ io.on("connection",function(uniquesocket){
 
 
 server.listen(3000, function(){
-    console.log("server running on httt://localhost:3000");
+    console.log("server running on http://localhost:3000");
 })

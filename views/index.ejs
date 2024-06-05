@@ -6,6 +6,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= title  %></title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .chessboard{
+      display: grid;
+      grid-template-columns: repeat(8 , minmax(0,1fr));
+      grid-template-rows: repeat(8 , minmax(0,1fr));
+      width: 400px;
+      height: 400px;
+      transform: rotate(0deg);
+    }
+    .piece.white{
+      color: white;
+      filter: drop-shadow(0 0 2px rgba(0, 0 , 0 , 1));
+
+    }
+    .piece.black{
+      color: black;
+    }
+    .flipped{
+      transform: rotate(180deg);
+    }
+    .square{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .square.light{
+      background-color: #edb87b;
+    }
+    .square.dark{
+      background-color: #ff8800;
+    }
+    .piece{
+      font-size: 36px;
+      cursor: pointer;
+    }
+    .piece.draggable{
+      cursor: grab;
+    }
+    .dragging{
+      opacity: 0.5;
+    }
+    .flipped .piece{
+      transform: rotate(180deg);
+    }
+      
+
+  </style>
 </head>
 
 <body>
