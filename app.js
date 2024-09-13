@@ -28,15 +28,7 @@ app.get('/',(req,res)=>{
 io.on("connection",function(uniquesocket){
     console.log("connected");
 
-    // uniquesocket.on("chutiya",()=>{ //taking evvent from frontend and using in bacckend
-        
-    //     io.emit("chu-tiya") //sending event from back to front to all front window
-    // })
-
-    // uniquesocket.on("disconnect" ,()=>{
-    //     console.log("chudgya");
-    // })
-
+  
     if(!players.white){
         players.white = uniquesocket.id;
         uniquesocket.emit("playerRole" , "w");
